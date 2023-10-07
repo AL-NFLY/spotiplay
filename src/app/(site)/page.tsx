@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <>
-        Test
-      </>
+      <h1>
+        Welcome Back to Spotiplay!
+      </h1>
     </main>
   )
 }
