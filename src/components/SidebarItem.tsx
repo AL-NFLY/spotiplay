@@ -8,7 +8,7 @@ interface SidebarItemProps {
     href: string;
     active?: boolean;
 }
-const SidebarItem: React.FC<SidebarItemProps> = ({icon, href, label, active}) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({icon: Icon, href, label, active}) => {
   return (
     <Link 
         href={href}
@@ -16,7 +16,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({icon, href, label, active}) =>
             active && "text-white"
         )}
     >
-        Test 
+        <Icon size={30}/>
+        <p className="w-full truncate">{label}</p>
     </Link>
   )
 }
