@@ -6,12 +6,12 @@ interface BoxProps {
 }
 const Box: React.FC<BoxProps> = ({children, classname}) => {
   return (
-    <div className={twMerge(`bg-neutral-900 rounded-md w-full h-fit`,
+    <section className={twMerge(`bg-neutral-900 rounded-md w-full h-fit`,
         classname
       )}
     >
         {children}
-    </div>
+    </section>
   )
 }
 
