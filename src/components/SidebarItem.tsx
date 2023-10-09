@@ -16,7 +16,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({icon: Icon, href, label, activ
             active && "text-white"
         )}
     >
-        <Icon size={30}/>
+        <Icon size={27}/>
         <p className="w-full truncate">{label}</p>
     </Link>
   )

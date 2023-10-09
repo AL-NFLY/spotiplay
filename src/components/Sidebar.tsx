@@ -2,9 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { IoMdHome, IoMdSearch } from "react-icons/io";
+import { IoHome, IoSearch } from "react-icons/io5";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
+import Library from "./Library";
 interface SidebarProps {
     children: React.ReactNode;
 }
@@ -12,13 +13,13 @@ const Sidebar: React.FC<SidebarProps> = ({children}) => {
     const pathname = usePathname();
     const routes = useMemo(() => [
         {
-            icon: IoMdHome,
+            icon: IoHome,
             label: 'Home',
             active: pathname !== '/search',
             href: '/',
         },
         {
-            icon: IoMdSearch,
+            icon: IoSearch,
             label: 'Search',
             active: pathname === '/search',
             href: 'search',
@@ -38,9 +39,12 @@ const Sidebar: React.FC<SidebarProps> = ({children}) => {
                     </div>
                 </Box>
                 <Box classname="overflow-y-auto h-full">
-                    Library
+                    <Library />
                 </Box>
             </div>
+            <main className="h-full flex-1 overflow-y-auto py-2">
+                {children}
+            </main>
         </div>
     )
 }
