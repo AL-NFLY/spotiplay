@@ -1,5 +1,5 @@
 # Spotiplay
-This is a full-stack music streaming website
+This is a full-stack music streaming website, inspired by Spotify.
 
 Techstack:
 - Typescript
