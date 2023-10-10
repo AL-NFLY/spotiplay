@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { IoAdd, IoAlbums } from "react-icons/io5"
 
 const Library = () => {

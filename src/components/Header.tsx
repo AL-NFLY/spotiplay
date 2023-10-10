@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation"
 import { IoChevronBack, IoChevronForward, IoHome, IoSearch } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
+import Button from "./Button"
 
 
 interface HeaderProps {
@@ -43,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                     <button className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80  transition">
                         <IoSearch size={20} className="text-white"/>
                     </button>
-             </div>
+                </div>
             </div>
             Header
         </div>
