@@ -30,8 +30,9 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                     </button>
                     <button className="rounded-full bg-neutral-900 flex text-center justify-center hover:opacity-80 transition p-1">
                         <IoChevronForward 
-                            size={25}/>
+                            size={25}
                             className="text-white" 
+                        />
                     </button>
                 </div>
 
