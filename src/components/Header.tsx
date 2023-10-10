@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation"
+import { IoChevronBack, IoChevronForward } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
 
 
@@ -21,7 +22,17 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
         )}>
             <div className="w-full mb-4 flex items-center justify-between">
                 <div className="hidden md:flex gap-x-2 items-center">
-
+                    <button className="rounded-full bg-neutral-900 flex text-center justify-center hover:opacity-80 transition p-1">
+                        <IoChevronBack 
+                            size={25}
+                            className="text-white" 
+                        />
+                    </button>
+                    <button className="rounded-full bg-neutral-900 flex text-center justify-center hover:opacity-80 transition p-1">
+                        <IoChevronForward 
+                            size={25}/>
+                            className="text-white" 
+                    </button>
                 </div>
 
             </div>
