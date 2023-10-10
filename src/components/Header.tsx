@@ -45,6 +45,14 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                         <IoSearch size={20} className="text-white"/>
                     </button>
                 </div>
+
+                <div className="flex justify-between items-center gap-x-4">
+                    <>
+                        <div>
+                            <Button>Sign Up</Button>
+                        </div>
+                    </>
+                </div>
             </div>
             Header
         </div>
