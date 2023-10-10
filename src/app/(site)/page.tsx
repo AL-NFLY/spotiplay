@@ -8,7 +8,7 @@ export default function Home() {
         Welcome Back to <span className='text-green-500'>Spotiplay</span>
       </h1> */}
       <Header>
-      <h2 className='text-green-500'>Test</h2>
+      <h2 className=''>Header</h2>
       </Header>
 
     </main>
