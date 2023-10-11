@@ -22,6 +22,15 @@ export default function Home() {
       </div>
       </Header>
 
+      <div className='mt-2 mb-7 px-6'>
+        <div className='flex justify-between items-center'>
+          <h2 className='text-xl md:text-2xl font-semibold'>Newest Songs</h2>
+        </div>
+        <div>
+          <p>List of Songs</p>
+        </div>
+      </div>
+
     </main>
   )
 }
