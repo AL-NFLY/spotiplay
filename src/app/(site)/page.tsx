@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import ListItem from '@/components/ListItem'
 import Image from 'next/image'
 
 export default function Home() {
@@ -8,7 +9,17 @@ export default function Home() {
         Welcome Back to <span className='text-green-500'>Spotiplay</span>
       </h1> */}
       <Header>
-      <h2 className=''>Header</h2>
+      <h2 className='text-2xl md:text-3xl font-semibold'>
+        Welcome back!
+      </h2>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 mt-4 gap-3'>
+        <ListItem 
+          image='/images/liked.png'
+          name='Liked songs'
+          href='liked'
+          />
+      </div>
       </Header>
 
     </main>
