@@ -5,8 +5,8 @@ Techstack:
 - Typescript
 - Next.js 13
 - TailwindCSS
-- PostgresSQL (To be Added)
-- Supabase (To be Added)
+- PostgresSQL
+- Supabase 
 - Stripe (To be Added)
 
 Todo&apos;s:
