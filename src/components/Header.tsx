@@ -3,8 +3,11 @@
 import { useRouter } from "next/navigation"
 import { IoChevronBack, IoChevronForward, IoHome, IoSearch } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
-import Button from "./Button"
+import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import useAuthModal from "@/hooks/useAuthModal"
+
+import Button from "./Button"
+import {useUser } from "@/hooks/useUser"
 
 
 interface HeaderProps {
@@ -14,10 +17,19 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({children, className}) => {
     const authModal = useAuthModal();
-    const router = useRouter();
-    const handleLogout = () => {
-        // Logout Handling
+    const router = useRouter(); 
+    const supabaseClient = useSupabaseClient();
+    const { user } = useUser();
+
+    const handleLogout = async () => {
+        const { error } = await supabaseClient.auth.signOut();
+        // TODO: reset any playing songs
+        router.refresh();
+        if(error) {
+            console.log(error);
+        }
     }
+
     return (
         <div className={twMerge(`
             h-fit bg-gradient-to-b from-emerald-800 p-6
