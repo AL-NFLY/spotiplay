@@ -7,12 +7,21 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 
 import Modal from './Modal'
 import useAuthModal from '@/hooks/useAuthModal';
+import { useEffect } from 'react';
 
 const AuthModal = () => {
     const supabaseClient = useSupabaseClient();
     const router = useRouter();
     const { session } = useSessionContext();
     const { isOpen, onClose } = useAuthModal();
+
+    useEffect(() => {
+        if(session){
+            router.refresh();
+            onClose();
+        }
+    }, [session, router, onClose]);
+
     return (
         <Modal
             title='Welcome back'
