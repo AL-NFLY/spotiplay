@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { IoChevronBack, IoChevronForward, IoHome, IoSearch } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
 import Button from "./Button"
+import useAuthModal from "@/hooks/useAuthModal"
 
 
 interface HeaderProps {
@@ -12,6 +13,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({children, className}) => {
+    const authModal = useAuthModal();
     const router = useRouter();
     const handleLogout = () => {
         // Logout Handling
@@ -48,8 +50,8 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
 
                 <div className="flex justify-between items-center gap-x-4">
                     <>
-                        <Button className="bg-transparent text-neutral-300 font-semibold">Sign up</Button>
-                        <Button className="bg-white text-black font-semibold px-6">Log in</Button>
+                        <Button onClick={authModal.onOpen} className="bg-transparent text-neutral-300 font-semibold">Sign up</Button>
+                        <Button onClick={authModal.onOpen} className="bg-white text-black font-semibold px-6">Log in</Button>
                     </>
                 </div>
             </div>
