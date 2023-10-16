@@ -18,7 +18,7 @@ const ModalProvider = () => {
     return (
         <>
             <Modal 
-                title='Test Model'
+                title='Test Modal'
                 description='Test Description'
                 isOpen
                 onChange={() => {}}
