@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Input from './Input';
 
 const UploadModal = () => {
-  const isLoading = useState();
+  const [isLoading, setIsLoading] = useState();
   const uploadModal = useUploadModal();
   const { register, handleSubmit, reset } = useForm<FieldValues>({
     defaultValues: {
