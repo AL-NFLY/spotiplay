@@ -1,11 +1,17 @@
 'use client'
 
+import useAuthModal from "@/hooks/useAuthModal"
+import { useUser } from "@/hooks/useUser"
 import Image from "next/image"
 import { IoAdd, IoAlbums } from "react-icons/io5"
 
 const Library = () => {
+    const authModal = useAuthModal();
+    const { user } = useUser();
     const onClick = () => {
-        //Upload Handling
+        if(!user) {
+            return authModal.onOpen();
+        }
 
     }
     return (
