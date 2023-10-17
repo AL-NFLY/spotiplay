@@ -1,7 +1,7 @@
 'use client'
 
 import useAuthModal from "@/hooks/useAuthModal"
-import useUploadModal from "@/hooks/useUploadModal "
+import useUploadModal from "@/hooks/useUploadModal"
 import { useUser } from "@/hooks/useUser"
 import Image from "next/image"
 import { IoAdd, IoAlbums } from "react-icons/io5"
