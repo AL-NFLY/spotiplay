@@ -5,6 +5,7 @@ import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 import useUploadModal from '@/hooks/useUploadModal'
 import Modal from './Modal'
 import { useState } from 'react';
+import Input from './Input';
 
 const UploadModal = () => {
   const isLoading = useState();
@@ -39,7 +40,7 @@ const UploadModal = () => {
       <form 
         onSubmit={handleSubmit(onSubmit)}
       >
-        <Input 
+        <Input
           id='title'
           disabled={isLoading}
           {...register('title', { required: true })}
