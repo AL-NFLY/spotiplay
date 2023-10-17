@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation"
-import { IoChevronBack, IoChevronForward, IoHome, IoSearch } from "react-icons/io5"
+import { IoChevronBack, IoChevronForward, IoHome, IoPeople, IoPerson, IoPersonAdd, IoPersonCircle, IoSearch } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
 import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import useAuthModal from "@/hooks/useAuthModal"
@@ -68,6 +68,12 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                                 className="bg-white px-6 py-2"
                             >
                                 Logout
+                            </Button>
+                            <Button
+                                onClick={() => router.push('/account')}
+                                className=""
+                            >
+                                <IoPerson />
                             </Button>
                         </div>
                     ): (
