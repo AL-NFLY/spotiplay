@@ -60,20 +60,19 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                     </button>
                 </div>
 
-                <div className="flex justify-between items-center gap-x-4">
+                <div className="flex justify-between items-center gap-x-3">
                 {user ? (
-                        <div className="flex items-center gap-x-4">
+                        <div className="flex items-center gap-x-3">
                             <Button
                                 onClick={handleLogout}
-                                className="bg-white px-6 py-2"
+                                className="px-6 py-2"
                             >
-                                Logout
+                                Log out
                             </Button>
                             <Button
                                 onClick={() => router.push('/account')}
-                                className=""
                             >
-                                <IoPerson />
+                                <IoPerson className="h-5 w-auto"/>
                             </Button>
                         </div>
                     ): (
