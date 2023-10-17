@@ -6,6 +6,7 @@ import useUploadModal from '@/hooks/useUploadModal'
 import Modal from './Modal'
 import { useState } from 'react';
 import Input from './Input';
+import Button from './Button';
 
 const UploadModal = () => {
   const [isLoading, setIsLoading] = useState();
@@ -76,6 +77,12 @@ const UploadModal = () => {
             {...register('image', { required: true })}
           />
         </>
+
+        <Button
+          disabled={isLoading} type='submit' className='mt-2 bg-green-500 text-black'
+        >
+          Create
+        </Button>
       </form>
     </Modal>
   )
