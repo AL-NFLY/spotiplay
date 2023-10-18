@@ -10,7 +10,6 @@ Techstack:
 - Stripe (To be Added)
 
 Todo&apos;s:
-- [ ] Finish upload modal & its functionality
 - [ ] Finish songs fetching
 - [ ] Finish songs list display
 - [ ] Add favorites functionality
@@ -18,6 +17,7 @@ Todo&apos;s:
 - [ ] Integrate Stripe
 - [ ] Add subscription modal
 - [ ] Create account page
+- [x] ~~Finish upload modal & its functionality~~
 - [x] ~~Create skeleton layout for main page~~
 - [x] ~~Finish supabase setup~~
 - [x] ~~Create supabase types~~
