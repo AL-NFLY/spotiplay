@@ -1,6 +1,7 @@
 import getSongs from '@/actions/getSongs';
 import Header from '@/components/Header'
 import ListItem from '@/components/ListItem'
+import PageContent from '@/components/PageContent';
 import Image from 'next/image'
 
 export const revalidate = 0;
@@ -31,9 +32,7 @@ export default async function Home() {
         <div className='flex justify-between items-center'>
           <h2 className='text-xl md:text-2xl font-semibold'>Newest Songs</h2>
         </div>
-        <div>
-          {songs.map((song) => <p>{song.title}</p>)}
-        </div>
+        <PageContent songs={songs}/>
       </div>
 
     </main>
