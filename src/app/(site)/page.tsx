@@ -1,8 +1,13 @@
+import getSongs from '@/actions/getSongs';
 import Header from '@/components/Header'
 import ListItem from '@/components/ListItem'
 import Image from 'next/image'
 
-export default function Home() {
+export const revalidate = 0;
+
+export default async function Home() {
+  const songs = await getSongs();
+  
   return (
     <main className='bg-neutral-900 h-full w-full rounded-md overflow-hidden overflow-y-auto'>
       {/* <h1 className=''>
@@ -27,7 +32,7 @@ export default function Home() {
           <h2 className='text-xl md:text-2xl font-semibold'>Newest Songs</h2>
         </div>
         <div>
-          <p>List of Songs</p>
+          {songs.map((song) => <p>{song.title}</p>)}
         </div>
       </div>
 
