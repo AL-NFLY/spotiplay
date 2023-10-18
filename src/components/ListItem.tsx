@@ -32,8 +32,8 @@ const ListItem: React.FC<ListItemProps> = ({image, name, href}) => {
             <p className="py-5 font-medium truncate">
                 {name}
             </p>
-            <div className="absolute flex items-center justify-center p-2 right-5 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 hover:scale-105 drop-shadow-md transition">
-                <IoPlay className="text-black" size={20}/>
+            <div className="absolute flex items-center justify-center p-2 right-5 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 hover:scale-110 drop-shadow-md transition">
+                <IoPlay className="text-black w-6 h-auto" />
             </div>
 
         </button>
