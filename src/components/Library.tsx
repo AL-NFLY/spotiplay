@@ -3,10 +3,14 @@
 import useAuthModal from "@/hooks/useAuthModal"
 import useUploadModal from "@/hooks/useUploadModal"
 import { useUser } from "@/hooks/useUser"
-import Image from "next/image"
 import { IoAdd, IoAlbums } from "react-icons/io5"
+import { Song } from "../../types"
 
-const Library = () => {
+interface LibraryProps {
+    songs: Song[]
+}
+
+const Library:React.FC<LibraryProps> = ({songs}) => {
     const authModal = useAuthModal();
     const uploadModal = useUploadModal();
     const { user } = useUser();
@@ -33,7 +37,11 @@ const Library = () => {
                 />
             </div>
             <div className="flex flex-col gap-y-2 mt-4 px-3">
-                List of songs
+                <ul>
+                {songs.map((item) => (
+                        <li key={item.id}>{item.title}</li>
+                        ))}
+                </ul>
             </div>
         </div>
     )
