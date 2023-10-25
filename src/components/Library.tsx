@@ -25,9 +25,9 @@ const Library:React.FC<LibraryProps> = ({songs}) => {
     return (
         <div className="flex flex-col">
             <div className="flex items-center justify-between px-5 pt-4">
-                <div className="inline-flex items-center gap-x-2">
+                <div className="inline-flex items-center gap-x-2 text-neutral-400">
                     <IoAlbums size={20}/>
-                    <p className="text-neutral-400 font-medium px-3">
+                    <p className="font-medium px-3">
                         Your Library
                     </p>
                 </div>
