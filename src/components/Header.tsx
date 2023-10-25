@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 
 import Button from "./Button"
 import {useUser } from "@/hooks/useUser"
+import Link from "next/link"
 
 
 interface HeaderProps {
@@ -57,12 +58,18 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                 </div>
 
                 <div className="flex md:hidden gap-x-2 items-center">
-                    <button className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80  transition">
-                        <IoHome size={20} className="text-white"/>
-                    </button>
-                    <button className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80  transition">
+                    <Link 
+                        href='/' 
+                        className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80 transition"
+                    >
+                            <IoHome size={20} className="text-white"/>
+                    </Link>
+                    <Link 
+                        href='/search'
+                        className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80  transition"
+                    >
                         <IoSearch size={20} className="text-white"/>
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="flex justify-between items-center gap-x-3">
