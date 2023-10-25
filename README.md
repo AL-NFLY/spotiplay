@@ -9,14 +9,14 @@ Techstack:
 - Supabase 
 - Stripe (To be Added)
 
-Todo&apos;s:
-- [ ] Finish songs fetching
+Todo&apos;s:    
 - [ ] Finish songs list display
 - [ ] Add favorites functionality
 - [ ] Add player functionality
 - [ ] Integrate Stripe
 - [ ] Add subscription modal
 - [ ] Create account page
+- [x] ~~Finish songs fetching~~
 - [x] ~~Finish upload modal & its functionality~~
 - [x] ~~Create skeleton layout for main page~~
 - [x] ~~Finish supabase setup~~
