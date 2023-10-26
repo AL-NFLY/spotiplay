@@ -5,7 +5,8 @@ import { useUser } from "@/hooks/useUser";
 import { useSessionContext } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { IoHeart, IoHeartDislike, IoHeartOutline } from "react-icons/io5";
+import toast from "react-hot-toast";
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
 
 interface LikedButtonProps {
     songId: string;
@@ -40,11 +41,42 @@ const LikedButton: React.FC<LikedButtonProps> = ({songId}) => {
   }, [songId, supabaseClient, user?.id])
 
   const Icon = isLiked ? IoHeart : IoHeartOutline
-  const handleLike = () => {
+  const handleLike = async () => {
     if (!user) {
       return authModal.onOpen();
     }
-      
+
+    if (isLiked) {
+      const { error } = await supabaseClient
+        .from('liked_songs')
+        .delete()
+        .eq('user_id', user.id)
+        .eq('song_id', songId)
+
+        if (error) {
+          toast.error(error.message);
+        }
+        else {
+          setIsLiked(false);
+        }
+    }
+    else {
+      const { error } = await supabaseClient
+        .from('liked_songs')
+        .insert({
+          song_id: songId,
+          user_id: user.id,
+        })
+
+        if (error) {
+          toast.error(error.message)
+        }
+        else {
+          setIsLiked(true);
+          toast.success('Liked!');
+        }
+    }
+    router.refresh()
   }
 
   return (
