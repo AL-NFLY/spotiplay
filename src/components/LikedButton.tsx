@@ -40,8 +40,18 @@ const LikedButton: React.FC<LikedButtonProps> = ({songId}) => {
   }, [songId, supabaseClient, user?.id])
 
   const Icon = isLiked ? IoHeart : IoHeartOutline
+  const handleLike = () => {
+    if (!user) {
+      return authModal.onOpen();
+    }
+      
+  }
+
   return (
-    <button className="hover:opacity-75 transition">
+    <button 
+      onClick={handleLike}
+      className="hover:opacity-75 transition"
+    >
       <Icon 
         color={isLiked ? '#22c55e' : 'white'}
         size ={22}
