@@ -1,5 +1,5 @@
 # Spotiplay
-This is a full-stack music streaming website equipped with user authentication and online transaction/subscription, inspired by Spotify.
+This is a full-stack music streaming website equipped with user authentication and online transactions/subscriptions modal, inspired by Spotify.
 
 Techstack:
 - Typescript
