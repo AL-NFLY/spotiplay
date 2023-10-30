@@ -2,10 +2,8 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import { Song } from "../../types";
 
 const useLoadSongUrl = (song: Song) => {
-
-//   non-auth users can play songs; change to useSessionContext() for auth users only
+//   non-auth users can play/see songs; change to useSessionContext() for auth users only
   const supabaseClient = useSupabaseClient();
-
 
   if (!song) {
     return '';
