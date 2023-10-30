@@ -3,6 +3,7 @@
 import useGetSongById from "@/hooks/useGetSongById";
 import useLoadSongUrl from "@/hooks/useLoadSongUrl";
 import usePlayer from "@/hooks/usePlayer"
+import PlayerContent from "./PlayerContent";
 
 const Player = () => {
   const player = usePlayer();
@@ -15,7 +16,11 @@ const Player = () => {
 
   return (
     <div className="fixed bottom-0 bg-black w-full h-20 py-2 px-4">
-      Player
+      <PlayerContent
+        key={songUrl} // to reset the element when skip button is pressed
+        song={song} 
+        songUrl={songUrl}
+      />
     </div>
 
   )
