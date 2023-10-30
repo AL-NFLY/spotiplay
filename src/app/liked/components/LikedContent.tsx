@@ -5,6 +5,7 @@ import { Song } from "../../../../types"
 import { useUser } from "@/hooks/useUser";
 import { useEffect } from "react";
 import MediaItem from "@/components/MediaItem";
+import LikedButton from "@/components/LikedButton";
 
 interface LikedContentProps {
     songs: Song[];
@@ -26,7 +27,7 @@ const LikedContent: React.FC<LikedContentProps> = ({songs}) => {
     return (
         <div className="flex flex-col gap-y-2 px-6 h-1/2 items-center justify-center">
             <p className="text-2xl font-semibold">No liked songs found</p>
-            <p className="text-sm">Feel free to start liking your favorite songs .</p>
+            <p className="text-sm">Feel free to start liking your favorite songs.</p>
         </div>
     )
   }
@@ -44,7 +45,7 @@ const LikedContent: React.FC<LikedContentProps> = ({songs}) => {
                         data={song}
                     />
                 </div>
-
+                <LikedButton songId={song.id}/>
             </div>
         ))}
     </div>
