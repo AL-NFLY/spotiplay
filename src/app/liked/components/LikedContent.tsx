@@ -21,7 +21,7 @@ const LikedContent: React.FC<LikedContentProps> = ({songs}) => {
   useEffect(() => {
     // throw non-auth users back to home
     if (!isLoading && !user) {
-        // router.replace('/')
+        router.replace('/')
         return authModal.onOpen();
     }
   }, [isLoading, user, router]);
