@@ -5,15 +5,17 @@ import { BsPlay, BsVolumeDown, BsVolumeMute, BsVolumeMuteFill } from "react-icon
 import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdPlay, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
 import { HiOutlineVolumeOff, HiOutlineVolumeUp } from "react-icons/hi";
 import usePlayer from "@/hooks/usePlayer";
+import useSound from "use-sound"
+import { useEffect } from "react";
 
-import { Song } from "../../types"
+import * as types from "../../types"
 import LikedButton from "./LikedButton";
 import MediaItem from "./MediaItem";
 import Slider from "./Slider";
 import { IoPlay } from "react-icons/io5";
 
 interface PlayerContentProps {
-    song: Song;
+    song: types.Song;
     songUrl: string;
 }
 
@@ -53,6 +55,46 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
     player.setId(previousSong)
   }
 
+  const [play, { pause, sound }] = useSound(
+    songUrl,
+    { 
+        volume: volume,
+        onplay: () => setIsPlaying(true),
+        onend: () => {
+            setIsPlaying(false);
+            onPlayNext();
+        },
+        onpause: () => setIsPlaying(false),
+        format: ['mp3'],
+    }
+  );
+
+  useEffect(() => {
+    sound?.play();
+    return () => {
+        sound?.unload()
+    }
+  }, [sound]);
+
+  const handlePlay = () => {
+    if (!isPlaying) {
+        play();
+    }
+    else {
+        pause();
+    }
+  } 
+
+  const toggleMute = () => {
+    if (volume === 0) {
+        setVolume(1);
+    } 
+    else {
+        setVolume(0);
+    }
+  }
+
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
         <div className="flex w-full justify-start">
@@ -84,7 +126,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
             />
 
             <div
-                onClick={() => {}} 
+                onClick={handlePlay} 
                 className="flex items-center justify-center rounded-full h-9 w-9 bg-white"
             >
                 <Icon className="text-black w-6 h-auto"/>
@@ -99,7 +141,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
         <div className="hidden md:flex w-full justify-end">
             <div className="flex items-center w-32 gap-x-2">
                 <VolumeIcon 
-                    onClick={() => {}}
+                    onClick={toggleMute}
                     className="w-7 h-auto text-neutral-400 hover:text-white` cursor-pointer"
                 />
 
