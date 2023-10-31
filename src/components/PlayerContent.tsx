@@ -29,7 +29,6 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
     if (player.ids.length === 0) {
         return;
     }
-
     const currentIndex = player.ids.findIndex((id) => id === player.activeId);
     const nextSong = player.ids[currentIndex + 1];
 
@@ -38,6 +37,20 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
         return player.setId(player.ids[0]);
     }
     player.setId(nextSong)
+  }
+
+  const onPlayPrevious = () => {
+    if (player.ids.length === 0) {
+        return;
+    }
+    const currentIndex = player.ids.findIndex((id) => id === player.activeId);
+    const previousSong = player.ids[currentIndex - 1];
+
+    // if there's no previous song left, throw back to n-th last song
+    if (!previousSong) {
+        return player.setId(player.ids[player.ids.length - 1]);
+    }
+    player.setId(previousSong)
   }
 
   return (
@@ -66,7 +79,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
         {/* Desktop View */}
         <div className="hidden w-full h-full max-w-screen-md gap-x-6 md:flex justify-center items-center">
             <IoIosSkipBackward 
-                onClick={() => {}}
+                onClick={onPlayPrevious}
                 className="w-6 h-auto text-neutral-400 hover:text-white cursor-pointer transition"
             />
 
