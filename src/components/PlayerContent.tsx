@@ -25,6 +25,21 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
   const Icon = isPlaying ? IoMdPause : IoPlay;
   const VolumeIcon = volume === 0 ? HiOutlineVolumeOff : HiOutlineVolumeUp;
 
+  const onPlayNext = () => {
+    if (player.ids.length === 0) {
+        return;
+    }
+
+    const currentIndex = player.ids.findIndex((id) => id === player.activeId);
+    const nextSong = player.ids[currentIndex + 1];
+
+    // if there's no next song left, throw back to 1st song
+    if (!nextSong) {
+        return player.setId(player.ids[0]);
+    }
+    player.setId(nextSong)
+  }
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
         <div className="flex w-full justify-start">
@@ -63,7 +78,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
             </div>
 
             <IoIosSkipForward 
-                onClick={() => {}}
+                onClick={onPlayNext}
                 className="w-6 h-auto text-neutral-400 hover:text-white cursor-pointer items-center transition"
             />
         </div>
