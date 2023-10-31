@@ -6,6 +6,7 @@ import LikedButton from "./LikedButton";
 import MediaItem from "./MediaItem";
 import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
 import { HiOutlineVolumeOff, HiOutlineVolumeUp } from "react-icons/hi";
+import Slider from "./Slider";
 
 interface PlayerContentProps {
     song: Song;
@@ -63,7 +64,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
             <div className="flex items-center w-32 gap-x-2">
                 <VolumeIcon 
                     onClick={() => {}}
-                    className="w-5 h-auto text-neutral-400 hover:text-white` cursor-pointer"/>
+                    className="w-7 h-auto text-neutral-400 hover:text-white` cursor-pointer"
+                />
+
+                <Slider />
             </div>
         </div>
 
