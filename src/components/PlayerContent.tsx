@@ -26,6 +26,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
                     songId={song.id}
                 />
             </div>
+        </div>
 
             {/* Mobile View for Pause/Play Button */}
             <div className="flex md:hidden col-auto w-full justify-end items-center">
@@ -46,16 +47,16 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
 
                 <div
                     onClick={() => {}} 
-                    className="flex items-center justify-center rounded-full h-9 w-9 bg-white">
+                    className="flex items-center justify-center rounded-full h-9 w-9 bg-white"
+                >
                     <Icon className="text-black w-5 h-auto"/>
                 </div>
 
                 <IoIosSkipForward 
                     onClick={() => {}}
-                    className="w-6 h-auto text-neutral-400 hover:text-white cursor-pointer items-center"
+                    className="w-6 h-auto text-neutral-400 hover:text-white cursor-pointer items-center transition"
                 />
             </div>
-        </div>
     </div>
   )
 }
