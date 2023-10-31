@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from "react";
 import { BsPlay, BsVolumeDown, BsVolumeMute, BsVolumeMuteFill } from "react-icons/bs";
+import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
+import { HiOutlineVolumeOff, HiOutlineVolumeUp } from "react-icons/hi";
+import usePlayer from "@/hooks/usePlayer";
+
 import { Song } from "../../types"
 import LikedButton from "./LikedButton";
 import MediaItem from "./MediaItem";
-import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
-import { HiOutlineVolumeOff, HiOutlineVolumeUp } from "react-icons/hi";
 import Slider from "./Slider";
 
 interface PlayerContentProps {
@@ -14,8 +17,12 @@ interface PlayerContentProps {
 }
 
 const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
-  const Icon = true ? IoMdPause : BsPlay
-  const VolumeIcon = true ? HiOutlineVolumeOff : HiOutlineVolumeUp
+  const player = usePlayer();
+  const [volume, setVolume] = useState(1);
+  const [isPlaying, setIsPlaying] = useState(false);    
+
+  const Icon = isPlaying ? IoMdPause : BsPlay;
+  const VolumeIcon = volume === 0 ? HiOutlineVolumeOff : HiOutlineVolumeUp;``
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
