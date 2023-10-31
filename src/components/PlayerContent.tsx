@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { BsPlay, BsVolumeDown, BsVolumeMute, BsVolumeMuteFill } from "react-icons/bs";
-import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
+import { IoIosSkipBackward, IoIosSkipForward, IoMdPause, IoMdPlay, IoMdSkipBackward, IoMdSkipForward } from "react-icons/io";
 import { HiOutlineVolumeOff, HiOutlineVolumeUp } from "react-icons/hi";
 import usePlayer from "@/hooks/usePlayer";
 
@@ -10,6 +10,7 @@ import { Song } from "../../types"
 import LikedButton from "./LikedButton";
 import MediaItem from "./MediaItem";
 import Slider from "./Slider";
+import { IoPlay } from "react-icons/io5";
 
 interface PlayerContentProps {
     song: Song;
@@ -21,8 +22,8 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
   const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);    
 
-  const Icon = isPlaying ? IoMdPause : BsPlay;
-  const VolumeIcon = volume === 0 ? HiOutlineVolumeOff : HiOutlineVolumeUp;``
+  const Icon = isPlaying ? IoMdPause : IoPlay;
+  const VolumeIcon = volume === 0 ? HiOutlineVolumeOff : HiOutlineVolumeUp;
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
@@ -58,7 +59,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
                 onClick={() => {}} 
                 className="flex items-center justify-center rounded-full h-9 w-9 bg-white"
             >
-                <Icon className="text-black w-5 h-auto"/>
+                <Icon className="text-black w-6 h-auto"/>
             </div>
 
             <IoIosSkipForward 
