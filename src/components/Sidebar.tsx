@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({children, songs}) => {
                     <Library songs={songs}/>
                 </Box>
             </div>
-            <main className="h-full flex-1 overflow-y-auto py-2 md:pr-2">
+            <main className="h-full flex-1 overflow-y-auto md:py-2 md:pr-2">
                 {children}
             </main>
         </nav>
