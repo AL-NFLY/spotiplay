@@ -109,22 +109,22 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
         </div>
 
         {/* Mobile View for Pause/Play Button */}
-        <div className="flex md:hidden col-auto w-full justify-end items-center gap-x-2 pr-1">
+        <div className="flex md:hidden col-auto w-full justify-end items-center gap-x-4 pr-1">
             <IoIosSkipBackward
                 onClick={onPlayPrevious}
-                className="w-5 h-auto"
+                className="w-5 h-auto hover:text-neutral-400"
             />
 
             <div
                 onClick={handlePlay}
-                className="flex h-9 w-9 items-center justify-center rounded-full p-1 cursor-pointer active:bg-neutral-800 transition"
+                className="flex h-9 w-9 items-center justify-center rounded-full p-1 cursor-pointer active:bg-neutral-800"
             >
                 <Icon className="w-6 h-auto"/>
             </div>
 
             <IoIosSkipForward
                 onClick={onPlayNext}
-                className="w-5 h-auto"
+                className="w-5   h-auto active:text-neutral-400"
             />
         </div>
 
