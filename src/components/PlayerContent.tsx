@@ -111,7 +111,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
         {/* Mobile View for Pause/Play Button */}
         <div className="flex md:hidden col-auto w-full justify-end items-center">
             <div
-                onClick={() => {}}
+                onClick={handlePlay}
                 className="flex h-9 w-9 items-center justify-center rounded-full p-1 cursor-pointer bg-white"
             >
                 <Icon className="text-black w-5 h-auto"/>
