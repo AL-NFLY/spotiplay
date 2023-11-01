@@ -16,7 +16,7 @@ const Library:React.FC<LibraryProps> = ({songs}) => {
     const authModal = useAuthModal();
     const uploadModal = useUploadModal();
     const { user } = useUser();
-    const player = useOnPlay(songs);
+    const onPlay = useOnPlay(songs);
 
     const onClick = () => {
         if(!user) {
@@ -44,7 +44,7 @@ const Library:React.FC<LibraryProps> = ({songs}) => {
                 <ul>
                     {songs.map((item) => (
                         <MediaItem
-                            onClick={player}
+                            onClick={onPlay}
                             key={item.id}
                             data={item} 
                         />
