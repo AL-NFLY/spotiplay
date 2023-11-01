@@ -10,7 +10,7 @@ export default async function Home() {
   const songs = await getSongs();
   
   return (
-    <main className='bg-neutral-900 h-full w-full rounded-md overflow-hidden overflow-y-auto'>
+    <article className='bg-neutral-900 h-full w-full rounded-md overflow-hidden overflow-y-auto'>
       <Header>
       <h2 className='text-2xl md:text-3xl font-semibold'>
         Welcome back!
@@ -25,13 +25,13 @@ export default async function Home() {
       </div>
       </Header>
 
-      <div className='mt-2 mb-7 px-6'>
+      <section className='mt-2 mb-7 px-6'>
         <div className='flex justify-between items-center'>
           <h2 className='text-xl md:text-2xl font-semibold'>Newest Songs</h2>
         </div>
         <PageContent songs={songs}/>
-      </div>
+      </section>
 
-    </main>
+    </article>
   )
 }
