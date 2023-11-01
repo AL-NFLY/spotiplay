@@ -10,10 +10,10 @@ Techstack:
 - Stripe (To be Added)
 
 Todo&apos;s:    
-- [ ] Add player functionality
 - [ ] Integrate Stripe
 - [ ] Add subscription modal
 - [ ] Create account page
+- [x] Add player functionality
 - [x] ~~Add favorites/liked functionality~~
 - [x] ~~Finish songs list display~~
 - [x] ~~Finish songs fetching~~
