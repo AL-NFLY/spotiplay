@@ -145,7 +145,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
                     className="w-7 h-auto text-neutral-400 hover:text-white` cursor-pointer"
                 />
 
-                <Slider />
+                <Slider 
+                    value={volume}
+                    onChange={(value) => setVolume(value)}
+                />
             </div>
         </div>
 
