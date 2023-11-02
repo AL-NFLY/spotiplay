@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                                 Log out
                             </Button>
                             <Button
-                                onClick={() => router.push('/account')}
+                                onClick={() => router.push('/about')}
                             >
                                 <IoPerson className="h-5 w-auto"/>
                             </Button>
