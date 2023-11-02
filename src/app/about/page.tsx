@@ -2,38 +2,9 @@
 
 import Header from "@/components/Header"
 import MediaItem from "@/components/MediaItem"
+import SocialItem from "@/components/SocialItem";
 import Image from "next/image"
 import Link from "next/link";
-import { IconType } from "react-icons";
-import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
-
-interface SocialProps {
-    href: string;
-    icon: IconType;
-    id: string;
-    alt: string;
-}
-
-const socials: SocialProps[] = [
-    {
-        href: 'https://github.com/AL-NFLY',
-        icon: IoLogoGithub,
-        id: 'Github',
-        alt: 'Github Logo',
-    },
-    {
-        href: 'https://www.linkedin.com/in/almer-naufaly/',
-        icon: IoLogoLinkedin,
-        id: 'LinkedIn',
-        alt: 'linkedIn logo',
-      },
-      {
-        href: 'mailto://almer.nfly@gmail.com',
-        icon: IoMail,
-        id: 'Email',
-        alt: 'email logo',
-      },
-]
 
 const page = () => {
   return (
@@ -72,20 +43,8 @@ const page = () => {
                 </p>
             </div>
 
-            <ul className="flex flex-col space-y-2">
-                {socials.map((social) => (
-                    <li>
-                        <Link
-                            href={social.href}
-                            target="_blank"
-                        >
-                            <social.icon
-                                className="w-9 h-auto"
-                            />
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <SocialItem />
+
         </section>
 
     </div>
