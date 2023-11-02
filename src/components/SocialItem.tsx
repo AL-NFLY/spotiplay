@@ -44,7 +44,7 @@ const socials: SocialItemProps[] = [
 ]
 const SocialItem = () => {
   return (
-    <ul className='mt-2'>
+    <ul className='mt-4 flex flex-col gap-y-2'>
         {socials.map((social) => (
             <li 
                 key={social.id}

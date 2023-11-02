@@ -35,7 +35,7 @@ const page = () => {
 
                 </p>
                 <p>
-                I&apos;m well-versed in Web Development, Cloud Engineering, and Network Engineering. Currently, my comfort language is Python, but these days I&apos;m more often use Typescript to keep up with the latest technology in web development.
+                I&apos;m well-versed in Web Development, Cloud Engineering, and Network Engineering. Currently, my comfort language is Python, but these days I often use Typescript more to keep up with the latest technology in web development.
                 </p>
                 <p>
                 If you would love to talk to me, about programming or non-programming related questions, feel free to reach me out on:
