@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { IoHome, IoSearch } from "react-icons/io5";
+import { IoHome, IoPerson, IoSearch } from "react-icons/io5";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import Library from "./Library";
@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({children, songs}) => {
         {
             icon: IoHome,
             label: 'Home',
-            active: pathname !== '/search',
+            active: pathname === '/',
             href: '/',
         },
         {
@@ -30,6 +30,12 @@ const Sidebar: React.FC<SidebarProps> = ({children, songs}) => {
             label: 'Search',
             active: pathname === '/search',
             href: 'search',
+        },
+        {
+            icon: IoPerson,
+            label: 'About',
+            active: pathname === '/about',
+            href: 'about',
         },
     ], [pathname]);
     return (
