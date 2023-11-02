@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react'
 import { IconType } from 'react-icons';
-import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5';
+import { IoMdGlobe } from 'react-icons/io';
+import { IoLogoGithub, IoLogoLinkedin, IoLogoWebComponent, IoMail } from 'react-icons/io5';
 
 interface SocialItemProps {
     href: string;
@@ -13,11 +14,18 @@ interface SocialItemProps {
 
 const socials: SocialItemProps[] = [
   {
-      href: 'https://github.com/AL-NFLY',
-      icon: IoLogoGithub,
-      id: 'Github',
-      at: 'github/AL-NFLY',
-      alt: 'Github Logo',
+      href: 'https://almer.vercel.app/',
+      icon: IoMdGlobe,
+      id: 'Personal Web',
+      at: 'almer.vercel.app',
+      alt: 'Personal Website',
+  },
+  {
+    href: 'https://github.com/AL-NFLY',
+    icon: IoLogoGithub,
+    id: 'Github',
+    at: 'github/AL-NFLY',
+    alt: 'Github Logo',
   },
   {
       href: 'https://www.linkedin.com/in/almer-naufaly/',
