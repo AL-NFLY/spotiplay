@@ -13,6 +13,7 @@ Todo&apos;s:
 - [ ] Integrate Stripe
 - [ ] Add subscription modal
 - [ ] Create account page
+- [x] Create about page
 - [x] Add player functionality
 - [x] ~~Add favorites/liked functionality~~
 - [x] ~~Finish songs list display~~
