@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation"
-import { IoChevronBack, IoChevronForward, IoHome, IoPeople, IoPerson, IoPersonAdd, IoPersonCircle, IoSearch } from "react-icons/io5"
+import { IoAlbums, IoChevronBack, IoChevronForward, IoHome, IoMenu, IoPerson, IoSearch } from "react-icons/io5"
 import { twMerge } from "tailwind-merge"
 import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import useAuthModal from "@/hooks/useAuthModal"
@@ -58,6 +58,12 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                 </div>
 
                 <div className="flex md:hidden gap-x-2 items-center">
+                    <Link
+                        href='/'
+                        className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80 transition"
+                    >
+                        <IoMenu  size={20} className="text-white" />
+                    </Link>
                     <Link 
                         href='/' 
                         className="flex items-center justify-center rounded-full p-2 bg-neutral-900 hover:opacity-80 transition"
