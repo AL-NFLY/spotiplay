@@ -1,4 +1,5 @@
 # Spotiplay
+![Website Thumbnail](public/images/hero.png)
 This is a full-stack music streaming website equipped with user authentication and online transactions/subscriptions modal, inspired by Spotify.
 
 Techstack:
