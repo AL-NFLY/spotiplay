@@ -152,7 +152,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
             <div className="flex items-center w-32 gap-x-2">
                 <VolumeIcon 
                     onClick={toggleMute}
-                    className="w-7 h-auto text-neutral-400 hover:text-white` cursor-pointer"
+                    className="w-7 h-auto text-neutral-400 hover:text-white cursor-pointer"
                 />
 
                 <Slider 
