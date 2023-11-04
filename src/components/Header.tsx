@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
     }
 
     return (
-        <div className={twMerge(`
+        <section className={twMerge(`
             h-fit bg-gradient-to-b from-emerald-800 p-6
             `, className
         )}>
@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({children, className}) => {
                 </div>
             </div>
             {children}
-        </div>
+        </section>
     )
 }
 
