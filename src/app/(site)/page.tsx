@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import ListItem from '@/components/ListItem'
 import PageContent from '@/app/(site)/components/PageContent';
 import Image from 'next/image'
+import Footer from '@/components/Footer';
 
 export const revalidate = 0;
 
@@ -25,13 +26,14 @@ export default async function Home() {
       </div>
       </Header>
 
-      <section className='mt-2 mb-7 px-6'>
+      <section className='mt-2 px-6'>
         <div className='flex justify-between items-center'>
           <h2 className='text-xl md:text-2xl font-semibold'>Newest Songs</h2>
         </div>
         <PageContent songs={songs}/>
       </section>
 
+      <Footer />
     </article>
   )
 }
