@@ -137,7 +137,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({song, songUrl}) => {
 
             <div
                 onClick={handlePlay} 
-                className="flex items-center justify-center rounded-full h-9 w-9 bg-white"
+                className="flex items-center justify-center rounded-full h-9 w-9 bg-white hover:scale-105 transition"
             >
                 <Icon className="text-black w-6 h-auto"/>
             </div>
