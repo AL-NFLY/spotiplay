@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from "@/components/Footer";
 import Header from "@/components/Header"
 import MediaItem from "@/components/MediaItem"
 import SocialItem from "@/components/SocialItem";
@@ -46,6 +47,8 @@ const page = () => {
             <SocialItem />
 
         </section>
+
+        <Footer />
 
     </div>
   )
