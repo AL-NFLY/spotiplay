@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="w-full h-full rounded-md bg-neutral-900 overflow-hidden overflow-y-auto">
+    <section className="w-full h-full rounded-md bg-neutral-900 overflow-hidden overflow-y-auto">
         <Header>
             <>
                 <div className="flex flex-col md:flex-row gap-x-5 md:items-center">
@@ -50,7 +50,7 @@ const page = () => {
 
         <Footer />
 
-    </div>
+    </section>
   )
 }
 
