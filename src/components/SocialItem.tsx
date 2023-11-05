@@ -55,7 +55,7 @@ const SocialItem = () => {
                     className='flex items-center gap-x-3 hover:bg-neutral-800/50 w-full p-2 rounded-md'
                 >
                     <div>
-                        <social.icon className='w-10 h-auto' />
+                        <social.icon className='w-9b h-auto' />
                     </div>
                     <div className='flex flex-col overflow-hidden gap-y-0.5 font-medium'>
                         <p className='truncate'>{social.id}</p>
