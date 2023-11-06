@@ -14,11 +14,18 @@ interface SocialItemProps {
 
 const socials: SocialItemProps[] = [
   {
-      href: 'https://almer.vercel.app/',
-      icon: IoMdGlobe,
-      id: 'Personal Web',
-      at: 'almer.vercel.app',
-      alt: 'Personal Website',
+    href: 'https://www.linkedin.com/in/almer-naufaly/',
+    icon: IoLogoLinkedin,
+    id: 'LinkedIn',
+    at: 'linkedin/almer-naufaly',
+    alt: 'linkedIn logo',
+  },
+  {
+    href: 'mailto://almer.nfly@gmail.com',
+    icon: IoMail,
+    id: 'Email',
+    at: 'almer.nfly@gmail.com',
+    alt: 'email logo',
   },
   {
     href: 'https://github.com/AL-NFLY',
@@ -28,18 +35,11 @@ const socials: SocialItemProps[] = [
     alt: 'Github Logo',
   },
   {
-      href: 'https://www.linkedin.com/in/almer-naufaly/',
-      icon: IoLogoLinkedin,
-      id: 'LinkedIn',
-      at: 'linkedin/almer-naufaly',
-      alt: 'linkedIn logo',
-  },
-  {
-      href: 'mailto://almer.nfly@gmail.com',
-      icon: IoMail,
-      id: 'Email',
-      at: 'almer.nfly@gmail.com',
-      alt: 'email logo',
+    href: 'https://almer.vercel.app/',
+    icon: IoMdGlobe,
+    id: 'Personal Web',
+    at: 'almer.vercel.app',
+    alt: 'Personal Website',
   },
 ]
 const SocialItem = () => {
