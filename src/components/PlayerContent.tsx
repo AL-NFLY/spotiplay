@@ -8,7 +8,7 @@ import usePlayer from "@/hooks/usePlayer";
 import useSound from "use-sound"
 import { useEffect } from "react";
 
-import * as types from "../types"
+import * as types from "@/types"
 import LikedButton from "./LikedButton";
 import MediaItem from "./MediaItem";
 import Slider from "./Slider";

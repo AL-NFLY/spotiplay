@@ -1,7 +1,7 @@
 'use client'
 
 import useLoadImage from "@/hooks/useLoadImage";
-import { Song } from "../types"
+import { Song } from "@/types"
 import Image from "next/image";
 import PlayButton from "./PlayButton";
     

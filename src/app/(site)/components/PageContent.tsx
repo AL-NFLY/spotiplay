@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Song } from '../../../types'
+import { Song } from '@/types'
 import SongItem from "@/components/SongItem";
 import useOnPlay from '@/hooks/useOnPlay';
 
