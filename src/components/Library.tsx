@@ -4,7 +4,7 @@ import useAuthModal from "@/hooks/useAuthModal"
 import useUploadModal from "@/hooks/useUploadModal"
 import { useUser } from "@/hooks/useUser"
 import { IoAdd, IoAlbums } from "react-icons/io5"
-import { Song } from "../../types"
+import { Song } from "../types"
 import MediaItem from "./MediaItem"
 import useOnPlay from "@/hooks/useOnPlay"
 

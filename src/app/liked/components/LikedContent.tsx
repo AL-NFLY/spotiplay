@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
-import { Song } from "../../../../types"
+import { Song } from "../../../types"
 import { useUser } from "@/hooks/useUser";
 import { useEffect } from "react";
 import MediaItem from "@/components/MediaItem";

@@ -6,7 +6,7 @@ import { IoHome, IoPerson, IoSearch } from "react-icons/io5";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import Library from "./Library";
-import { Song } from "../../types";
+import { Song } from "../types";
 import usePlayer from "@/hooks/usePlayer";
 import { twMerge } from "tailwind-merge";
 
