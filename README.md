@@ -12,8 +12,8 @@ Techstack:
 
 Todo&apos;s:    
 - [ ] Integrate Stripe
-- [ ] Add subscription modal
 - [ ] Create account page
+- [ ] Add subscription modal
 - [x] Create about page
 - [x] Add player functionality
 - [x] ~~Add favorites/liked functionality~~
