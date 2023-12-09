@@ -3,7 +3,7 @@
 This is a full-stack music streaming website equipped with user authentication and online transactions/subscriptions modal, inspired by Spotify.
 
 ## Live Link:
-(Click Here!)[https://spotiplay.vercel.app/]
+[Click Here!](https://spotiplay.vercel.app/)
 
 ## Techstack:
 - Typescript
