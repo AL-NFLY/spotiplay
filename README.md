@@ -2,7 +2,10 @@
 ![Website Thumbnail](public/images/hero.png)
 This is a full-stack music streaming website equipped with user authentication and online transactions/subscriptions modal, inspired by Spotify.
 
-Techstack:
+## Live Link:
+(Click Here!)[https://spotiplay.vercel.app/]
+
+## Techstack:
 - Typescript
 - Next.js 13
 - TailwindCSS
@@ -10,7 +13,7 @@ Techstack:
 - Supabase 
 - Stripe (To be Added)
 
-Todo&apos;s:    
+## Todo&apos;s:    
 - [ ] Integrate Stripe
 - [ ] Create account page
 - [ ] Add subscription modal
